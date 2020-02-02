@@ -60,7 +60,7 @@ func (s *Server) init() (err error) {
 	}
 
 	s.router.HandleFunc("/users", customHanlders.UserList(s.db)).Methods("GET")
-	s.router.HandleFunc("/user/{id}", customHanlders.UserByID(s.db)).Methods("GET")
+	s.router.HandleFunc("/users/{id}", customHanlders.UserByID(s.db)).Methods("GET")
 	return nil
 }
 
